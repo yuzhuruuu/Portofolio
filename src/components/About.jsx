@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrainCircuit, Database, Palette } from 'lucide-react';
 
 export default function About() {
@@ -26,8 +27,8 @@ export default function About() {
     <section id="about" className="py-32 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
-        {/* Judul Section */}
-        <div className="text-center mb-20">
+        {/* Judul Section - Muncul dari bawah */}
+        <div className="text-center mb-20" data-aos="fade-up">
           <h3 className="text-5xl font-black tracking-tight">
             About <span className="text-(--color-neon-purple)">Me</span>
           </h3>
@@ -36,24 +37,24 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           
-          {/* Sisi Kiri: Narasi/Cerita */}
-          <div className="space-y-8">
+          {/* Sisi Kiri: Muncul dari Kiri */}
+          <div className="space-y-8" data-aos="fade-right" data-aos-delay="100" data-aos-duration="600">
             <h4 className="text-4xl font-bold leading-tight">
               A Passionate <span className="text-(--color-neon-blue)">Data Enthusiast</span> & Machine Learning.
             </h4>
             
             <div className="text-xl text-gray-400 leading-relaxed space-y-6">
               <p>
-                As an Information Systems student at <span className="text-white">Universitas Negeri Semarang</span>, I thrive at the intersection of technology and creativity. I don't just write code; I tell stories through data and craft experiences through design.
+                As an Information Systems student at <span className="text-white">Universitas Negeri Semarang</span>, I’m passionate about turning ideas into meaningful digital solutions. I enjoy working at the intersection of data, technology, and design.
               </p>
               <p>
-                My journey involves exploring <span className="text-white">Machine Learning</span> to solve complex problems and utilizing <span className="text-white">UI/UX principles</span> to ensure those solutions are user-friendly. Being a Teaching Assistant has further sharpened my ability to communicate technical concepts clearly.
+                My focus lies in Data Analysis and <span className="text-white">Machine Learning</span>, where I explore how data can solve real-world problems while applying UI/UX principles.
               </p>
             </div>
           </div>
 
-          {/* Sisi Kanan: Service Cards (Inspirasi dari referensi) */}
-          <div className="space-y-6">
+          {/* Sisi Kanan: Service Cards - Muncul dari Kanan */}
+          <div className="space-y-6" data-aos="fade-left" data-aos-delay="100" data-aos-duration="600">
             {services.map((service, i) => (
               <div 
                 key={i} 

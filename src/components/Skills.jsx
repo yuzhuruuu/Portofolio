@@ -1,54 +1,72 @@
+import React from 'react';
+import * as Icon from 'lucide-react';
+
 export default function Skills() {
   const skillCategories = [
     {
       category: "Machine Learning",
-      icon: "🤖",
+      icon: "Cpu", // Pakai nama ikon Lucide
       skills: ["Supervised Learning", "Unsupervised Learning", "Neural Networks", "Scikit-Learn", "Model Deployment"],
       color: "var(--color-neon-purple)"
     },
     {
       category: "Data Analysis",
-      icon: "📊",
+      icon: "BarChart3",
       skills: ["Python (Pandas/NumPy)", "Data Visualization", "SQL", "Exploratory Data Analysis", "Statistics"],
       color: "var(--color-neon-blue)"
     },
     {
       category: "Web Development",
-      icon: "🌐",
+      icon: "Globe",
       skills: ["HTML/CSS", "JavaScript", "PHP", "Tailwind CSS", "MySQL"],
-      color: "#00f2fe"
+      color: "var(--color-neon-blue)" // Disamakan biar konsisten neon blue
     },
     {
       category: "Design & Tools",
-      icon: "🎨",
+      icon: "Palette",
       skills: ["Figma (UI/UX)", "Adobe Illustrator", "Git/GitHub", "Canva"],
-      color: "#f472b6"
+      color: "var(--color-neon-purple)" // Disamakan biar selang-seling purple-blue
     }
   ];
 
+  // Fungsi helper untuk render ikon Lucide biar gak undefined
+  const renderIcon = (iconName, color) => {
+    const LucideIcon = Icon[iconName] || Icon.Code;
+    return <LucideIcon className="w-8 h-8 transition-all duration-500" strokeWidth={1.5} />;
+  };
+
   return (
-    <section id="skills" className="py-32 px-6 relative z-10 bg-black/20">
+    <section id="skills" className="py-32 px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
         
-        <div className="text-center mb-20">
+        <div className="text-center mb-20" data-aos="fade-up">
           <h3 className="text-5xl font-black tracking-tight">
             Technical <span className="text-(--color-neon-blue)">Skills</span>
           </h3>
           <div className="w-24 h-2 bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* Grid berubah jadi 2 kolom di tablet, 4 kolom di layar lebar */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
           {skillCategories.map((cat, i) => (
             <div 
               key={i} 
-              className="p-8 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all duration-500 group flex flex-col items-center text-center"
+              data-aos="fade-up" 
+              data-aos-delay="100"
+              data-aos-duration="600"
+              className="p-8 rounded-[32px] bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-500 group flex flex-col items-center text-center hover:bg-white/[0.04]"
             >
-              <div className="text-4xl mb-6 p-4 bg-white/5 rounded-2xl group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500">
-                {cat.icon}
+              {/* Icon Container: Awalnya abu-abu, hover jadi warna neon */}
+              <div 
+                className="mb-6 p-5 bg-white/5 rounded-2xl transition-all duration-500 group-hover:scale-110 text-gray-500"
+                style={{ '--hover-color': cat.color }}
+              >
+                <div className="group-hover:text-[var(--hover-color)] group-hover:drop-shadow-[0_0_10px_var(--hover-color)]">
+                  {renderIcon(cat.icon)}
+                </div>
               </div>
               
-              <h4 className="text-xl font-bold mb-6 text-white tracking-tight" style={{ color: cat.color }}>
+              {/* Judul: Default putih, hover nyala */}
+              <h4 className="text-xl font-bold mb-6 text-white tracking-tight group-hover:text-[var(--hover-color)] transition-colors duration-500" style={{ '--hover-color': cat.color }}>
                 {cat.category}
               </h4>
 
@@ -56,7 +74,7 @@ export default function Skills() {
                 {cat.skills.map((skill, j) => (
                   <span 
                     key={j} 
-                    className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs font-semibold text-gray-400 hover:text-white transition-all cursor-default"
+                    className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-gray-200 group-hover:border-white/20 transition-all duration-500"
                   >
                     {skill}
                   </span>

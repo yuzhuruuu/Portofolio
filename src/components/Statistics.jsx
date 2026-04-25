@@ -8,31 +8,38 @@ const stats = [
     value: 2, // Persentase skill/keyakinan dalam %
     suffix: '+',
     color: 'var(--color-neon-purple)', // Warna Donat Ungu
+    desc: 'Years exploring IT & Computer Science'
   },
   {
     title: 'Project',
     value: 15, // Angka statis (misal jumlah project ML)
     suffix: '+',
     color: 'var(--color-neon-blue)', // Warna Donat Biru
+    desc: 'Completed Projects'
   },
   {
     title: 'Tech Skills',
     value: 90, // Persentase skill desain
     suffix: '%',
     color: '#00f2fe', // Warna Donat Cyan/Biru Muda (buat variasi neon)
+    desc: 'Proficiency in Modern Technologies'
   },
 ];
 
 export default function Statistics() {
   return (
-    <section className="py-24 relative z-10">
+    <section className="py-24 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
         
         {stats.map((stat, i) => {
           const strokeDashoffset = 440 - (440 * stat.value) / 100;
 
           return (
-            <div key={i} className="flex flex-col items-center group">
+            <div key={i} className="flex flex-col items-center group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="600"
+            >
               
               {/* === DIAGRAM DONAT CSS === */}
               <div className="relative w-48 h-48 mb-8 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">

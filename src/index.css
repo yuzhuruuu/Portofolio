@@ -7,10 +7,24 @@
   --color-card-bg: #110e23;
 }
 
+/* Tambahkan ini biar pas klik menu header, jalannya smooth */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-dark-bg);
   color: white;
   margin: 0;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+}
+
+/* Opsional: Biar animasi AOS lebih rapi di layar lebar */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
 }

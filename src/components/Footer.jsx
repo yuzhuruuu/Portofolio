@@ -36,9 +36,8 @@ export default function Footer() {
 
         {/* Copyright & Info */}
         <div className="flex flex-col md:flex-row justify-between items-center w-full text-gray-500 text-sm font-medium gap-4">
-          <p>© {currentYear} Annisa Yusri. All rights reserved.</p>
+          <p>© {currentYear} Yusri. All rights reserved.</p>
           <div className="flex gap-6">
-            <span className="hover:text-white transition-colors cursor-default">Built with React & Tailwind</span>
             <span className="hover:text-white transition-colors cursor-default">Semarang, ID</span>
           </div>
         </div>

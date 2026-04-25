@@ -6,7 +6,6 @@ const projectsData = [
     title: 'Instan UTBK',
     desc: 'Platform e-learning interaktif untuk persiapan ujian masuk perguruan tinggi (UTBK).',
     tech: ['HTML/CSS', 'PHP', 'SQL'],
-    // Tambahkan "Icon." di depan nama ikonnya
     icon: <Icon.Book className="w-8 h-8" />
   },
   {
@@ -31,19 +30,30 @@ const projectsData = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 px-6 relative z-10">
+    <section id="projects" className="py-32 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h3 className="text-6xl font-black tracking-tight mb-6">Featured <span className="text-(--color-neon-blue)">Works</span></h3>
+        
+        {/* Judul Section - Muncul Barengan */}
+        <div className="text-center mb-20" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+          <h3 className="text-6xl font-black tracking-tight mb-6">
+            Featured <span className="text-(--color-neon-blue)">Works</span>
+          </h3>
           <div className="w-24 h-2 bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projectsData.map((proj, i) => (
-            <div key={i} className="bg-white/[0.03] backdrop-blur-md p-10 rounded-3xl border border-white/5 hover:border-(--color-neon-purple)/50 transition-all group hover:scale-[1.03] cursor-pointer">
+            <div 
+              key={i} 
+              // Animasi Zoom-In Barengan (Tanpa Delay Tangga)
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-aos-duration="600"
+              data-aos-offset="100"
+              className="bg-white/[0.03] backdrop-blur-md p-10 rounded-3xl border border-white/5 hover:border-(--color-neon-purple)/50 transition-all group hover:scale-[1.03] cursor-pointer"
+            >
               <div className="flex justify-between items-center mb-8">
                   <h4 className="text-3xl font-bold group-hover:text-(--color-neon-purple) transition-colors">{proj.title}</h4>
-                  {/* Gunakan div pembungkus agar ikonnya rapi dan warnanya matching */}
                   <div className="p-3 bg-white/5 rounded-2xl text-(--color-neon-blue) group-hover:text-(--color-neon-purple) transition-colors">
                     {proj.icon}
                   </div>

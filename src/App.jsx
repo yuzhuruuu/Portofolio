@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Statistics from './components/Statistics';
@@ -9,6 +11,27 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durasi animasi (1 detik)
+      once: false,    // Kalau 'true', animasi cuma jalan sekali pas scroll pertama
+      easing: 'ease-in-out',
+      offset: 100,
+      startEvent: 'DOMContentLoaded',
+    });
+    const handleHashChange = () => {
+      setTimeout(() => {
+      AOS.refresh();
+    }, 500); 
+  };
+
+  window.addEventListener('hashchange', handleHashChange);
+
+  return () => {
+    window.removeEventListener('hashchange', handleHashChange);
+  };
+  }, []);
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-(--color-dark-bg) text-gray-100 font-sans">
       
@@ -27,15 +50,15 @@ function App() {
       <Navbar />
       
       <main>
-        <Hero />
-        <Statistics />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Hero/>
+        <Statistics/>
+        <About/>
+        <Projects/>
+        <Skills/>
+        <Contact/>
       </main>
 
-      <Footer />
+      <Footer/>
       
     </div>
   );

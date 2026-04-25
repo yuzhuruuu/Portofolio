@@ -17,12 +17,18 @@ export default function Hero() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-          <button className="px-8 py-3.5 bg-(--color-neon-purple) text-white text-lg rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:-translate-y-1 transition-all">
+          <a 
+            href="#projects" 
+            className="px-8 py-3.5 bg-(--color-neon-purple) text-white text-lg rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:-translate-y-1 transition-all text-center"
+          >
             My Projects
-          </button>
-          <button className="px-8 py-3.5 bg-transparent text-white text-lg rounded-2xl font-bold border border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:-translate-y-1 transition-all">
+          </a>
+          <a 
+            href="#contact" 
+            className="px-8 py-3.5 bg-transparent text-white text-lg rounded-2xl font-bold border border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:-translate-y-1 transition-all text-center"
+          >
             Let's Talk
-          </button>
+          </a>
         </div>
       </div>
     </section>
