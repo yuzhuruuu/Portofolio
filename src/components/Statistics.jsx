@@ -8,7 +8,7 @@ const stats = [
     value: 2, // Persentase skill/keyakinan dalam %
     suffix: '+',
     color: 'var(--color-neon-purple)', // Warna Donat Ungu
-    desc: 'Years exploring IT & Computer Science'
+    desc: 'Exploring IT & Computer Science'
   },
   {
     title: 'Project',

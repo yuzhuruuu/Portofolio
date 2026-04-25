@@ -1,30 +1,80 @@
 import React from 'react';
-import * as Icon from 'lucide-react';
+import { 
+  GraduationCap, 
+  Smartphone, 
+  ShieldAlert, 
+  TrendingUp, 
+  Layout, 
+  PieChart, 
+  UserPlus, 
+  Coffee,
+  DatabaseZap,
+  Code
+} from 'lucide-react';
 
 const projectsData = [
   {
     title: 'Instan UTBK',
-    desc: 'Platform e-learning interaktif untuk persiapan ujian masuk perguruan tinggi (UTBK).',
+    desc: 'Ineractive e-learning platform designed to help students prepare for university entrance exams (UTBK).',
     tech: ['HTML/CSS', 'PHP', 'SQL'],
-    icon: <Icon.Book className="w-8 h-8" />
+    icon: <GraduationCap className="w-5 h-5" />,
+    image: '/projects/Instan UTBK.png'
   },
   {
-    title: 'I-SECRET Official Website',
-    desc: 'Sebagai Project Manager dalam pengembangan website organisasi Information Research and Creative Technology.',
-    tech: ['Project Management', 'UI/UX'],
-    icon: <Icon.Globe className="w-8 h-8" />
+    title: 'Ambanes App',
+    desc: 'AI-powered pickup and delivery service application (Antar Jemput & Jasa Titip) specifically designed for UNNES students.',
+    tech: ['FIGMA', 'UI/UX', 'Mobile Design'],
+    icon: <Smartphone className="w-5 h-5" />,
+    image: '/projects/Ambanes.png'
   },
   {
-    title: 'Ambanes',
-    desc: 'Aplikasi Antar Jemput-Jasa Titip khusus untuk mahasiswa UNNES berbasis AI.',
-    tech: ['UI/UX', 'AI'],
-    icon: <Icon.Plane className="w-8 h-8" />
+    title: 'Cyberbullying Analysis',
+    desc: 'Sentiment analysis on tweet data for classifying cyberbullying categories (gender, religion, age, ethnicity) using WordCloud visualization.',
+    tech: ['Python', 'NLP', 'Data Science'],
+    icon: <ShieldAlert className="w-5 h-5" />,
+    image: '/projects/Tweet Bullying.png'
   },
   {
-    title: 'Segelas Kopi',
-    desc: 'Website e-commerce untuk UMKM yang dihosting menggunakan Hostinger dan dilengkapi dengan fitur modern',
-    tech: ['Wordpress', 'UI/UX', 'Business Strategy'],
-    icon: <Icon.FolderGit2 className="w-8 h-8" />
+    title: 'Economic Data Analysis',
+    desc: 'Visualization of labor force participation and unemployment trends across different regions using time series analysis for economic insights.',
+    tech: ['Python', 'Matplotlib', 'Analysis'],
+    icon: <TrendingUp className="w-5 h-5" />,
+    image: '/projects/Analisis Data Ekonomi.png'
+  },
+  {
+    title: 'Instagram Engagement',
+    desc: 'Instagram content performance dashboard based on post types to measure reach and engagement effectiveness.',
+    tech: ['Data Analysis', 'Excel', 'Marketing'],
+    icon: <Layout className="w-5 h-5" />,
+    image: '/projects/Instagram Analisis.png'
+  },
+  {
+    title: 'Bike Purchase Analysis',
+    desc: 'Customer demographic analysis based on profession, region, and income to predict bicycle purchase behavior using a BI dashboard.',
+    tech: ['Statistics', 'Data Visualization'],
+    icon: <PieChart className="w-5 h-5" />,
+    image: '/projects/Pembelian Sepeda.png'
+  },
+  {
+    title: 'Pendaftaran Camaba',
+    desc: 'Management information system for new student admissions, featuring exam cards, selection schedules, and bank payment integration.',
+    tech: ['Web System', 'Database', 'UI Design'],
+    icon: <UserPlus className="w-5 h-5" />,
+    image: '/projects/Pendaftaran Camaba.png'
+  },
+  {
+    title: 'Segelas Kopi UMKM',
+    desc: 'E-commerce website for a local coffee business with product catalog, store locations, and a modern customer contact form.',
+    tech: ['WordPress', 'Web Design', 'Hosting'],
+    icon: <Coffee className="w-5 h-5" />,
+    image: '/projects/Segelas Kopi.png'
+  },
+  {
+    title: 'Data Professional Survey',
+    desc: 'Comprehensive analysis of global data professional surveys to map salary trends, job satisfaction, and programming language preferences (Python/R).',
+    tech: ['Data Analysis', 'Python', 'Pandas', 'Power BI'],
+    icon: <DatabaseZap className="w-5 h-5" />,
+    image: '/projects/Survei Profesional Data.png' 
   }
 ];
 
@@ -33,38 +83,51 @@ export default function Projects() {
     <section id="projects" className="py-32 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
-        {/* Judul Section - Muncul Barengan */}
-        <div className="text-center mb-20" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+        <div className="text-center mb-20" data-aos="fade-up">
           <h3 className="text-6xl font-black tracking-tight mb-6">
             Featured <span className="text-(--color-neon-blue)">Works</span>
           </h3>
           <div className="w-24 h-2 bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((proj, i) => (
             <div 
               key={i} 
-              // Animasi Zoom-In Barengan (Tanpa Delay Tangga)
               data-aos="zoom-in"
-              data-aos-delay="100"
               data-aos-duration="600"
-              data-aos-offset="100"
-              className="bg-white/[0.03] backdrop-blur-md p-10 rounded-3xl border border-white/5 hover:border-(--color-neon-purple)/50 transition-all group hover:scale-[1.03] cursor-pointer"
+              className="bg-white/[0.03] backdrop-blur-md rounded-[32px] border border-white/5 hover:border-(--color-neon-purple)/50 transition-all group overflow-hidden flex flex-col h-full"
             >
-              <div className="flex justify-between items-center mb-8">
-                  <h4 className="text-3xl font-bold group-hover:text-(--color-neon-purple) transition-colors">{proj.title}</h4>
-                  <div className="p-3 bg-white/5 rounded-2xl text-(--color-neon-blue) group-hover:text-(--color-neon-purple) transition-colors">
-                    {proj.icon}
-                  </div>
+              <div className="relative h-52 overflow-hidden border-b border-white/5">
+                <img 
+                  src={proj.image} 
+                  alt={proj.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80"></div>
               </div>
-              <p className="text-xl text-gray-400 mb-8 leading-relaxed">{proj.desc}</p>
-              <div className="flex gap-4 flex-wrap">
-                {proj.tech.map(t => (
-                  <span key={t} className="px-4 py-2 text-sm bg-white/5 border border-white/10 text-gray-300 rounded-xl font-bold">
-                    {t}
-                  </span>
-                ))}
+
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-center mb-5">
+                  <h4 className="text-2xl font-bold group-hover:text-(--color-neon-purple) transition-colors font-mono tracking-tight">
+                    {proj.title}
+                  </h4>
+                  <div className="p-2.5 bg-white/5 rounded-xl text-(--color-neon-blue) group-hover:text-(--color-neon-purple) transition-colors border border-white/10">
+                    {proj.icon || <Icon.Code className="w-5 h-5" />}
+                  </div>
+                </div>
+
+                <p className="text-gray-400 mb-6 line-clamp-3 text-sm leading-relaxed flex-grow">
+                  {proj.desc}
+                </p>
+                
+                <div className="flex gap-2 flex-wrap mt-auto pt-4 border-t border-white/5">
+                  {proj.tech.map(t => (
+                    <span key={t} className="px-3 py-1.5 text-[10px] bg-white/5 border border-white/10 text-gray-400 rounded-lg font-extrabold uppercase tracking-widest">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

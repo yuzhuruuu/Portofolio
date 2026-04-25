@@ -20,11 +20,11 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="flex flex-wrap justify-center gap-8 mb-12 text-sm font-bold text-gray-400 uppercase tracking-widest">
-          {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((link) => (
+          {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((link) => (
             <a 
               key={link} 
               href={`#${link.toLowerCase()}`} 
-              className="hover:text-white transition-colors"
+              className="hover:text-(--color-neon-purple) transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]"
             >
               {link}
             </a>

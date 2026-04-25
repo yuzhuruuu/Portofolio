@@ -18,13 +18,13 @@ export default function Skills() {
     {
       category: "Web Development",
       icon: "Globe",
-      skills: ["HTML/CSS", "JavaScript", "PHP", "Tailwind CSS", "MySQL"],
+      skills: ["HTML/CSS", "JavaScript", "PHP", "Tailwind CSS", "MySQL", "React"],
       color: "var(--color-neon-blue)" // Disamakan biar konsisten neon blue
     },
     {
       category: "Design & Tools",
       icon: "Palette",
-      skills: ["Figma (UI/UX)", "Adobe Illustrator", "Git/GitHub", "Canva"],
+      skills: ["Figma (UI/UX)", "Git/GitHub", "Power BI", "Tableau"],
       color: "var(--color-neon-purple)" // Disamakan biar selang-seling purple-blue
     }
   ];
