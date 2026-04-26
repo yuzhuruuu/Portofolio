@@ -101,7 +101,7 @@ export default function Contact() {
             </div>
 
             <div className="pt-10 border-t border-black/10 dark:border-white/5 text-center lg:text-left">
-              <p className="text-xl font-bold mb-10 text-slate-600 dark:text-gray-400 uppercase tracking-[0.25em] lg:pl-50 block w-full">
+              <p className="text-xl font-bold mb-10 text-slate-600 dark:text-gray-400 uppercase tracking-[0.25em] lg:pl-45 block w-full">
                 Connect With Me
               </p>
               
