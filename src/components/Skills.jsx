@@ -10,7 +10,7 @@ export default function Skills() {
       color: "var(--color-neon-purple)"
     },
     {
-      category: "Data Sciencetist",
+      category: "Data Scientist",
       icon: "BarChart3",
       skills: ["Python (Pandas/NumPy)", "Data Visualization", "SQL", "Exploratory Data", "Statistics"],
       color: "var(--color-neon-blue)"
