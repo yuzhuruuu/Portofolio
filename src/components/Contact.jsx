@@ -147,7 +147,7 @@ export default function Contact() {
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <input type="text" name="from_name" placeholder="What's your name?" required className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-(--color-neon-purple) transition-all" />
               <input type="email" name="reply_to" placeholder="Write your E-mail here..." required className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-(--color-neon-blue) transition-all" />
-              <textarea name="message" rows="4" placeholder="Tell me about your idea..." required className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-(--color-neon-purple) transition-all resize-none"></textarea>
+              <textarea name="message" rows="4" placeholder="Tell me about your idea!" required className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-(--color-neon-purple) transition-all resize-none"></textarea>
               <button 
                 type="submit" // Pastikan type-nya submit
                 className="w-full py-5 bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) text-white font-black text-lg rounded-2xl hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all flex items-center justify-center gap-2"

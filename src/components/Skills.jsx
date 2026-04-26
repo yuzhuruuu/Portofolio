@@ -10,9 +10,9 @@ export default function Skills() {
       color: "var(--color-neon-purple)"
     },
     {
-      category: "Data Analysis",
+      category: "Data Sciencetist",
       icon: "BarChart3",
-      skills: ["Python (Pandas/NumPy)", "Data Visualization", "SQL", "Exploratory Data Analysis", "Statistics"],
+      skills: ["Python (Pandas/NumPy)", "Data Visualization", "SQL", "Exploratory Data", "Statistics"],
       color: "var(--color-neon-blue)"
     },
     {
@@ -22,7 +22,7 @@ export default function Skills() {
       color: "var(--color-neon-blue)" // Disamakan biar konsisten neon blue
     },
     {
-      category: "Design & Tools",
+      category: "Tools & Visualization",
       icon: "Palette",
       skills: ["Figma (UI/UX)", "Git/GitHub", "Power BI", "Tableau"],
       color: "var(--color-neon-purple)" // Disamakan biar selang-seling purple-blue
