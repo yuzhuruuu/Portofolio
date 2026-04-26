@@ -36,7 +36,7 @@ function App() {
 return (
     // Tambahkan bg-white (untuk light) dan dark:bg-(--color-dark-bg) (untuk dark)
     // Tambahkan transition-colors duration-700 agar perpindahan temanya smooth
-    <div className="min-h-screen relative overflow-hidden transition-colors duration-700 bg-white text-gray-900 dark:bg-dark-bg dark:text-gray-100 font-sans">
+    <div className="min-h-screen relative overflow-hidden transition-colors duration-700 font-sans">
       
       {/* BACKGROUND ELEMENTS - Kita buat muncul hanya di mode Dark biar estetik */}
       <div className="hidden dark:block absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-neon-purple/20 rounded-full blur-[160px] pointer-events-none"></div>

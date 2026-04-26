@@ -28,7 +28,7 @@ export default function Hero() {
             onInit={(typewriter) => {
               typewriter
                 // Kalimat Pertama
-                .typeString('Passionate about turning data into <span class="text-white font-bold">insights</span> and building impactful <span class="text-white font-bold">solutions</span>.')
+                .typeString('Passionate about turning data into <span class="text-neon-purple font-bold">insights</span> and building impactful <span class="text-neon-blue font-bold">solutions</span>.')
                 // Jeda sebentar sebelum ngetik baris kedua
                 .pauseFor(300) 
                 // Pindah baris (Enter)
@@ -48,7 +48,7 @@ export default function Hero() {
           </a>
           <a 
             href="#contact" 
-            className="px-8 py-3.5 bg-transparent text-white text-lg rounded-2xl font-bold border border-white/20 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all text-center"
+            className="px-8 py-3.5 bg-transparent text-gray-700 dark:text-gray-300 text-lg rounded-2xl font-bold border border-gray-700/20 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all text-center"
           >
             Let's Talk
           </a>

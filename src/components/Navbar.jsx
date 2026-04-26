@@ -35,11 +35,11 @@ export default function Navbar() {
         {/* Logo - Ikut mengecil sedikit biar estetik */}
         <h1 className={`font-bold tracking-tight transition-all duration-500 ${scrolled ? 'text-xl' : 'text-2xl'}`}>
           <span className="bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) bg-clip-text text-transparent font-black">Yusri</span>
-          <span className="text-white font-medium">'s Portofolio</span>
+          <span className="text-slate-700 dark:text-gray-300 font-medium">'s Portofolio</span>
         </h1>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex space-x-10 text-[13px] font-medium uppercase tracking-[0.15em] text-gray-300">
+        <div className="hidden lg:flex space-x-10 text-[13px] font-medium uppercase tracking-[0.15em] text-slate-700 dark:text-gray-300">
           {navLinks.map(item => (
             <a 
               key={item} 
@@ -57,7 +57,7 @@ export default function Navbar() {
           className="lg:hidden flex flex-col justify-center items-end gap-1.5 w-8 h-8 focus:outline-none"
         >
           <div className={`h-[2px] transition-all duration-300 rounded-full ${isOpen ? 'w-8 rotate-45 translate-y-[8px] bg-(--color-neon-purple)' : 'w-8 bg-white'}`}></div>
-          <div className={`h-[2px] bg-white transition-all duration-300 rounded-full ${isOpen ? 'opacity-0' : 'w-6'}`}></div>
+          <div className={`h-[2px] bg-slate-700 dark:bg-gray-300 transition-all duration-300 rounded-full ${isOpen ? 'opacity-0' : 'w-6'}`}></div>
           <div className={`h-[2px] transition-all duration-300 rounded-full ${isOpen ? 'w-8 -rotate-45 -translate-y-[8px] bg-(--color-neon-purple)' : 'w-4'}`}></div>
         </button>
       </div>

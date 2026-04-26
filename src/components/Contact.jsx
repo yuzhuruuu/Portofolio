@@ -99,33 +99,50 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="pt-10 border-t border-white/5 text-center lg:text-left">
-              <p className="text-xl font-bold mb-10 text-gray-400 uppercase tracking-[0.25em] lg:pl-40 block w-full">
-                Connect With Me
-              </p>
-              
-              <div className="flex flex-wrap gap-6 justify-center lg:justify-start lg:pl-30">
-                <a href="https://linkedin.com/in/annisayusri-nurrochmah" target="_blank" rel="noreferrer" className="w-16 h-16 bg-white/3 border border-white/5 rounded-2xl flex items-center justify-center group hover:border-[#ffffff]/60 hover:bg-[#0077b5]/15 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(0,119,181,0.3)]">
-                  <svg viewBox="0 0 24 24" className="w-8 h-8 fill-[#ffffff]" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.98 0 1.778-.773 1.778-1.729V1.729C24 .774 23.205 0 22.225 0z"/>
-                  </svg>
-                </a>
-                <a href="https://instagram.com/ysr.rchmh" target="_blank" rel="noreferrer" className="w-16 h-16 p-4.5 bg-white/3 border border-white/5 rounded-2xl flex items-center justify-center group hover:border-[#ffffff]/60 hover:bg-[#0077b5]/15 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(0,119,181,0.3)]">
-                  {renderBrandIcon('instagram', '#ffffff')}
-                </a>
-                <a href="https://github.com/yuzhuruuu" target="_blank" rel="noreferrer" className="w-16 h-16 p-4.5 bg-white/3 border border-white/5 rounded-2xl flex items-center justify-center group hover:border-white/60 hover:bg-[#0077b5]/15 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(0,119,181,0.3)]">
-                  {renderBrandIcon('github', 'white')}
-                </a>
-                <a href="https://tiktok.com/@https.bewhysr" target="_blank" rel="noreferrer" className="w-16 h-16 p-4.5 bg-white/3 border border-white/5 rounded-2xl flex items-center justify-center group hover:border-[#ffffff]/60 hover:bg-[#0077b5]/15 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(0,119,181,0.3)]">
-                  {renderBrandIcon('tiktok', '#ffffff')}
-                </a>
-              </div>
-            </div>
-          </div>
+            <div className="pt-10 border-t border-black/10 dark:border-white/5 text-center lg:text-left">
+              {/* Judul yang menyesuaikan warna teks utama */}
+              <p className="text-xl font-bold mb-10 text-slate-600 dark:text-gray-400 uppercase tracking-[0.25em] lg:pl-40 block w-full">
+                Connect With Me
+              </p>
+              
+              <div className="flex flex-wrap gap-6 justify-center lg:justify-start lg:pl-30">
+                {/* LinkedIn */}
+                <a href="https://linkedin.com/in/annisayusri-nurrochmah" target="_blank" rel="noreferrer" 
+                  className="w-16 h-16 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.2)]">
+                  <svg viewBox="0 0 24 24" className="w-8 h-8 fill-slate-700 dark:fill-white group-hover:fill-sky-500 transition-colors" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.98 0 1.778-.773 1.778-1.729V1.729C24 .774 23.205 0 22.225 0z"/>
+                  </svg>
+                </a>
+
+                {/* Instagram */}
+                <a href="https://instagram.com/ysr.rchmh" target="_blank" rel="noreferrer" 
+                  className="w-16 h-16 p-4.5 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.2)]">
+                  <span className="text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors">
+                    {renderBrandIcon('instagram', 'currentColor')}
+                  </span>
+                </a>
+
+                {/* GitHub */}
+                <a href="https://github.com/yuzhuruuu" target="_blank" rel="noreferrer" 
+                  className="w-16 h-16 p-4.5 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.2)]">
+                  <span className="text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors">
+                    {renderBrandIcon('github', 'currentColor')}
+                  </span>
+                </a>
+
+                {/* TikTok */}
+                <a href="https://tiktok.com/@https.bewhysr" target="_blank" rel="noreferrer" 
+                  className="w-16 h-16 p-4.5 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.2)]">
+                  <span className="text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors">
+                    {renderBrandIcon('tiktok', 'currentColor')}
+                  </span>
+                </a>
+              </div>
+            </div>
 
           {/* Sisi Kanan: Muncul dari Kanan */}
           <div className="bg-white/[0.03] backdrop-blur-xl p-10 rounded-[40px] border border-white/5 shadow-2xl" data-aos="fade-left" data-aos-duration="600">
-            <h4 className="text-2xl font-bold mb-8 text-center text-white">Send a Message</h4>
+            <h4 className="text-3xl font-bold mb-8 text-center">Send a Message</h4>
             
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <input type="text" name="from_name" placeholder="What's your name?" required className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-(--color-neon-purple) transition-all" />
@@ -144,7 +161,7 @@ export default function Contact() {
               )}
             </form>
           </div>
-
+        </div>
         </div>
       </div>
     </section>

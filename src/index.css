@@ -7,15 +7,30 @@
   --color-card-bg: #110e23;
 }
 
+:root {
+  background-color: white;
+  --text-main: #1e293b;   /* Slate 800 (Gelap) */
+  --text-muted: #64748b;  /* Slate 500 (Abu-abu) */
+  --card-bg: #f8fafc;     /* Slate 50 (Putih tulang) */
+  --border-color: rgba(0,0,0,0.1);
+}
+
+.dark {
+  background-color: var(--color-dark-bg);
+  --text-main: #f1f5f9;   /* Putih terang */
+  --text-muted: #94a3b8;  /* Abu-abu terang */
+  --card-bg: #110e23;     /* Warna card kamu sebelumnya */
+  --border-color: rgba(255,255,255,0.1);
+} 
+
 /* Tambahkan ini biar pas klik menu header, jalannya smooth */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+  color: var(--text-main);
+  transition: background-color 0.5s, color 0.5s;
 }
 
 /* Opsional: Biar animasi AOS lebih rapi di layar lebar */
@@ -53,4 +68,11 @@ body {
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 1.2s; /* Muncul tepat setelah nama & typewriter mulai jalan */
   opacity: 0; /* Biar nggak kedip di awal */
+}
+
+.text-main { color: var(--text-main); }
+.text-muted { color: var(--text-muted); }
+.bg-card-custom { background-color: var(--card-bg); }
+.shadow-neon-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }

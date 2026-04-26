@@ -73,7 +73,7 @@ export default function Statistics() {
                 {/* === TEKS DI TENGAH DONAT === */}
                 <div className="absolute flex items-baseline gap-1">
                   {/* Angka Utama */}
-                  <span className="text-6xl font-black text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+                  <span className="text-6xl font-black text-neon-purple drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                     {stat.value}
                   </span>
                   {/* Simbol (% atau +) */}

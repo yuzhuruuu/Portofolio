@@ -40,15 +40,30 @@ export default function About() {
           {/* Sisi Kiri: Muncul dari Kiri */}
           <div className="space-y-8" data-aos="fade-right" data-aos-delay="100" data-aos-duration="600">
             <h4 className="text-4xl font-bold leading-tight">
-              A Passionate <span className="text-(--color-neon-blue)">Data Enthusiast</span> & Machine Learning.
+              A Passionate <span className="text-(--color-neon-blue)">Data Enthusiast</span> & <span className="text-purple-700 dark:text-neon-purple">
+              Machine Learning</span>.
             </h4>
             
-            <div className="text-xl text-gray-400 leading-relaxed space-y-6">
-              <p>
-                As an Information Systems student at <span className="text-white">Universitas Negeri Semarang</span>, I’m passionate about turning ideas into meaningful digital solutions. I enjoy working at the intersection of data, technology, and design.
+            <div className="space-y-4 text-slate-600 dark:text-gray-400">
+              <p className="leading-relaxed">
+                As an Information Systems student at{" "}
+                <span className="font-bold text-blue-700 dark:text-neon-blue">
+                  Universitas Negeri Semarang
+                </span>
+                , I’m passionate about turning ideas into meaningful digital solutions. I
+                enjoy working at the intersection of data, technology, and design.
               </p>
-              <p>
-                My focus lies in Data Analysis and <span className="text-white">Machine Learning</span>, where I explore how data can solve real-world problems while applying UI/UX principles.
+              <p className="leading-relaxed">
+                My focus lies in{" "}
+                <span className="font-bold text-purple-700 dark:text-neon-purple">
+                  Data
+                </span>{" "}
+                and{" "}
+                <span className="font-bold text-purple-700 dark:text-neon-purple">
+                  Machine Learning
+                </span>
+                , where I explore how data can solve real-world problems while applying
+                UI/UX principles.
               </p>
             </div>
           </div>
