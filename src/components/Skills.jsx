@@ -22,7 +22,7 @@ export default function Skills() {
       color: "var(--color-neon-blue)" // Disamakan biar konsisten neon blue
     },
     {
-      category: "Tools & Visualization",
+      category: "Tools & Vi",
       icon: "Palette",
       skills: ["Figma (UI/UX)", "Git/GitHub", "Power BI", "Tableau"],
       color: "var(--color-neon-purple)" // Disamakan biar selang-seling purple-blue
