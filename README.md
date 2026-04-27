@@ -1,16 +1,38 @@
-# React + Vite
+# 🌌 Modern Portfolio - Annisa Yusri Nur Rochmah
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This project is a high-performance web application built with **React.js** and **Tailwind CSS v4**. It features a futuristic space-themed aesthetic, interactive animations, and a seamless Dark/Light mode experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Key Features
 
-## React Compiler
+-   **🌓 Floating Theme Toggle:** A custom Floating Action Button (FAB) to switch between "Deep Space" (Dark) and "Clean Sky" (Light) themes.
+-   **🚀 Smooth Animations:** Powered by **AOS (Animate On Scroll)** for a professional and fluid user experience.
+-   **📱 Fully Responsive:** Hand-crafted layouts that look stunning on mobile, tablet, and desktop.
+-   **✉️ Email Integration:** Fully functional "Send a Message" section using **EmailJS** for direct communication.
+-   **🎨 Modern Tech Stack:** Utilizing the latest Tailwind CSS v4 features and Lucide-React icons.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Core:** [React.js](https://reactjs.org/) & [Vite](https://vitejs.dev/)
+-   **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+-   **Animations:** [AOS](https://michalsnik.github.io/aos/)
+-   **Icons:** [Lucide React](https://lucide.dev/) & [Simple Icons](https://simpleicons.org/)
+-   **Form Handling:** [EmailJS](https://www.emailjs.com/)
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally:
+
+### 1. Prerequisites
+Make sure you have **Node.js** installed on your machine.
+
+### 2. Installation
+Clone the repository to your local machine:
+```bash
+git clone [https://github.com/yuzhuruuu/web-portofolio.git](https://github.com/yuzhuruuu/web-portofolio.git)
+cd web-portofolio

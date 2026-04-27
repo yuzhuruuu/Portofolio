@@ -111,7 +111,7 @@ export default function Projects() {
                 <div className="flex justify-between items-center mb-5">
                   <h4 className="text-2xl font-bold group-hover:text-(--color-neon-purple) transition-colors font-mono tracking-tight">
                     {proj.title}
-                  </h4>
+                  </h4> 
                   <div className="p-2.5 bg-white/5 rounded-xl text-(--color-neon-blue) group-hover:text-(--color-neon-purple) transition-colors border border-white/10">
                     {proj.icon || <Icon.Code className="w-5 h-5" />}
                   </div>

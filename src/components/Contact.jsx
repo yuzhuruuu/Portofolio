@@ -16,7 +16,7 @@ export default function Contact() {
         style={{ filter: color === "currentColor" ? 'brightness(0) invert(1)' : 'none' }}
       />
     );
-  }; // Fixed: Tag penutup fungsi ini sebelumnya salah
+  }; 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -163,8 +163,8 @@ export default function Contact() {
             </form>
           </div>
 
-        </div> {/* Tutup Grid */}
-      </div> {/* Tutup Max-w-7xl */}
+        </div>
+      </div>
     </section>
   );
 }
