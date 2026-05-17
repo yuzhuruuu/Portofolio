@@ -4,17 +4,22 @@ Welcome to my personal portfolio! This project is a high-performance web applica
 
 ---
 
-## ✨ Key Features
-
--   **🌓 Floating Theme Toggle:** A custom Floating Action Button (FAB) to switch between "Deep Space" (Dark) and "Clean Sky" (Light) themes.
--   **🚀 Smooth Animations:** Powered by **AOS (Animate On Scroll)** for a professional and fluid user experience.
--   **📱 Fully Responsive:** Hand-crafted layouts that look stunning on mobile, tablet, and desktop.
--   **✉️ Email Integration:** Fully functional "Send a Message" section using **EmailJS** for direct communication.
--   **🎨 Modern Tech Stack:** Utilizing the latest Tailwind CSS v4 features and Lucide-React icons.
+## Public Portofolio Access
+https://ysr-port.vercel.app
 
 ---
 
-## 🛠️ Tech Stack
+## Key Features
+
+-   ** Floating Theme Toggle:** A custom Floating Action Button (FAB) to switch between "Deep Space" (Dark) and "Clean Sky" (Light) themes.
+-   ** Smooth Animations:** Powered by **AOS (Animate On Scroll)** for a professional and fluid user experience.
+-   ** Fully Responsive:** Hand-crafted layouts that look stunning on mobile, tablet, and desktop.
+-   ** Email Integration:** Fully functional "Send a Message" section using **EmailJS** for direct communication.
+-   ** Modern Tech Stack:** Utilizing the latest Tailwind CSS v4 features and Lucide-React icons.
+
+---
+
+## Tech Stack
 
 -   **Core:** [React.js](https://reactjs.org/) & [Vite](https://vitejs.dev/)
 -   **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
@@ -24,7 +29,7 @@ Welcome to my personal portfolio! This project is a high-performance web applica
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to run the project locally:
 
