@@ -28,7 +28,7 @@ const projectsData = [
     link: 'https://huggingface.co/spaces/yusri22/ABSA-Shopee-Kel-3'
   },
   {
-    title: 'SPK Penanganan Stunting',
+    title: 'DSS Priority Handling of Stunting',
     desc: 'A web-based Decision Support System using Fuzzy-TOPSIS algorithms to optimize and prioritize urgent nutritional interventions for toddlers, reducing diagnostic subjectivity for healthcare centers.',
     tech: ["PHP Native", "MySQL", "JavaScript", "Chart.js"],
     icon: <ShieldAlert className="w-5 h-5" />,
@@ -36,7 +36,7 @@ const projectsData = [
     link: 'https://stunting-engine.kesug.com/'
   },
   {
-    title: 'Pendaftaran Camaba',
+    title: 'Registration of New Prospective Students',
     desc: 'Management information system for new student admissions, featuring exam cards, selection schedules, and bank payment integration.',
     tech: ['Web System', 'Database', 'UI Design'],
     icon: <UserPlus className="w-5 h-5" />,
