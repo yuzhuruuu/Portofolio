@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="text-center max-w-6xl">
         
         <p data-aos="fade-down" data-aos-delay="100" className="text-lg font-mono text-(--color-neon-blue) mb-6 tracking-[0.3em] uppercase">
-          / Hello World
+          Welcome to My Portofolio
         </p>
         
         <h2 data-aos="zoom-in" data-aos-duration="1000" className="text-6xl md:text-[90px] font-bold tracking-tight leading-[1.1] mb-8">

@@ -4,6 +4,12 @@ import { BrainCircuit, Database, Palette } from 'lucide-react';
 export default function About() {
   const services = [
     {
+      title: "Machine Learning",
+      desc: "Developing intelligent systems that can learn and improve from experience.",
+      icon: <BrainCircuit className="w-8 h-8" />,
+      color: "#00f2fe"
+    },
+    {
       title: "Data Scientist",
       desc: "Transforming raw datasets into actionable insights using Python and SQL.",
       icon: <Database className="w-8 h-8" />,
@@ -14,12 +20,6 @@ export default function About() {
       desc: "Designing intuitive user interfaces and seamless experiences with Figma.",
       icon: <Palette className="w-8 h-8" />,
       color: "var(--color-neon-blue)"
-    },
-    {
-      title: "Machine Learning",
-      desc: "Developing intelligent systems that can learn and improve from experience.",
-      icon: <BrainCircuit className="w-8 h-8" />,
-      color: "#00f2fe"
     }
   ];
 
