@@ -17,7 +17,7 @@ const projectsData = [
     tech: ['HTML/CSS', 'PHP', 'SQL'],
     icon: <GraduationCap className="w-5 h-5" />,
     image: '/projects/Instan UTBK.png',
-    link: 'https://github.com/yuzhuruuu/Kursus_Online'
+    link: 'http://instanutbk.lovestoblog.com/pages/about.php'
   },
   {
     title: 'Sentiment Analysis of Public Opinion on Shopee',
