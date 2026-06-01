@@ -18,7 +18,7 @@ export default function Skills() {
     {
       category: "Web Development",
       icon: "Globe",
-      skills: ["HTML/CSS", "JavaScript", "PHP", "Tailwind CSS", "MySQL", "React"],
+      skills: ["HTML/CSS", "JavaScript", "PHP", "Tailwind CSS", "MySQL", "React", "Bootstrap", "Laravel"],
       color: "var(--color-neon-blue)" // Disamakan biar konsisten neon blue
     },
     {
