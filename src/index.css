@@ -76,3 +76,81 @@ body {
 .shadow-neon-purple {
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
+
+.star {
+  position: absolute;
+  display: block;
+  color: white; /* path uses currentColor */
+  transform-origin: center;
+  will-change: transform, opacity, filter;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.9));
+  animation-name: twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    transform: scale(0.65) rotate(0deg);
+    opacity: 0.2;
+    filter: brightness(0.7) drop-shadow(0 0 2px rgba(255,255,255,0.3));
+  }
+  35% {
+    transform: scale(1.05) rotate(4deg);
+    opacity: 0.75;
+    filter: brightness(1.2) drop-shadow(0 0 6px rgba(255,255,255,0.7));
+  }
+  60% {
+    transform: scale(1.3) rotate(-3deg);
+    opacity: 1;
+    filter: brightness(1.6) drop-shadow(0 0 10px rgba(255,255,255,0.9));
+  }
+}
+
+.star-background {
+  overflow: hidden;
+}
+
+.star-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: repeat;
+  will-change: transform;
+}
+
+.layer-1 {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px), radial-gradient(circle, rgba(255,255,255,0.22) 1px, transparent 1px);
+  background-size: 70px 70px, 120px 120px;
+  opacity: 0.28;
+  animation: drift 70s linear infinite;
+}
+
+.layer-2 {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 1px);
+  background-size: 96px 96px;
+  opacity: 0.18;
+  animation: drift 92s linear infinite reverse;
+}
+
+.layer-3 {
+  background-image: radial-gradient(circle, rgba(168,85,247,0.12) 1px, transparent 1px), radial-gradient(circle, rgba(59,130,246,0.1) 1px, transparent 1px);
+  background-size: 160px 160px, 220px 220px;
+  opacity: 0.14;
+  animation: drift 56s linear infinite;
+}
+
+.layer-lines {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.12) 2px, transparent 2px);
+  background-size: 220px 220px, 220px 220px, 90px 90px;
+  opacity: 0.14;
+  animation: drift 140s linear infinite reverse;
+}
+
+@keyframes drift {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-22%, 22%, 0); }
+}

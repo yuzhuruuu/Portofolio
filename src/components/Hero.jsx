@@ -13,7 +13,7 @@ export default function Hero() {
         <h2 data-aos="zoom-in" data-aos-duration="1000" className="text-6xl md:text-[90px] font-bold tracking-tight leading-[1.1] mb-8">
           Hi, I'm <br />
           <span className="bg-gradient-to-r from-(--color-neon-purple) via-(--color-neon-blue) to-(--color-neon-purple) bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-            Annisa Yusri
+            Yusri
           </span>
         </h2>
         
