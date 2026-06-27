@@ -17,7 +17,7 @@ const projectsData = [
     tech: ['HTML/CSS', 'Laravel', 'PHP', 'MySQL'],
     icon: <Shirt className="w-5 h-5" />,
     image: '/projects/Washly.png',
-    link: 'http://washly.lovestoblog.com/pages/about.php'
+    link: 'http://washly.lovestoblog.com'
   },
   {
     title: 'Sentiment Analysis of Public Opinion on Shopee',
