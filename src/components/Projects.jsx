@@ -6,18 +6,18 @@ import {
   TrendingUp, 
   Layout, 
   UserPlus, 
-  Coffee,
+  Shirt,
   DatabaseZap
 } from 'lucide-react';
 
 const projectsData = [
   {
-    title: 'Instan UTBK',
-    desc: 'Interactive e-learning platform designed to help students prepare for university entrance exams (UTBK).',
-    tech: ['HTML/CSS', 'PHP', 'SQL'],
-    icon: <GraduationCap className="w-5 h-5" />,
-    image: '/projects/Instan UTBK.png',
-    link: 'http://instanutbk.lovestoblog.com/pages/about.php'
+    title: 'Washly',
+    desc: 'A web-based laundry service management system for tracking orders, services, and customer activity efficiently.',
+    tech: ['HTML/CSS', 'Laravel', 'PHP', 'MySQL'],
+    icon: <Shirt className="w-5 h-5" />,
+    image: '/projects/Washly.png',
+    link: 'http://washly.lovestoblog.com/pages/about.php'
   },
   {
     title: 'Sentiment Analysis of Public Opinion on Shopee',
@@ -52,12 +52,12 @@ const projectsData = [
     link: 'https://www.figma.com/proto/5yxPhYB2YJrOE2NDICqVzh/WF-AMBANESS?node-id=188-337&t=ZjtU8CY6OreOdE4A-1'
   },
   {
-    title: 'Segelas Kopi UMKM',
-    desc: 'E-commerce website for a local coffee business with product catalog, store locations, and a modern customer contact form.',
-    tech: ['WordPress', 'Web Design', 'Hosting'],
-    icon: <Coffee className="w-5 h-5" />,
-    image: '/projects/Segelas Kopi.png',
-    link: null
+    title: 'Instan UTBK',
+    desc: 'Interactive e-learning platform designed to help students prepare for university entrance exams (UTBK).',
+    tech: ['HTML/CSS', 'PHP', 'SQL'],
+    icon: <GraduationCap className="w-5 h-5" />,
+    image: '/projects/Instan UTBK.png',
+    link: 'http://instanutbk.lovestoblog.com/pages/about.php'
   },
   {
     title: 'Economic Data Analysis',
