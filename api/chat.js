@@ -16,7 +16,9 @@ export default async function handler(req, res) {
 
     // Inisialisasi Gemini API menggunakan key dari environment
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    
+    // PERBAIKAN FINAL: Gunakan model generasi terbaru (Gemini 2.5) yang aktif
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     // Ini adalah 'Otak' AI kamu. Silakan edit sesuai profilmu!
     const systemPrompt = `You are a friendly AI Assistant named "Yusri's AI Assistant" on Yusri's portfolio website. 
