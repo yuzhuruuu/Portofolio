@@ -10,6 +10,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AIAssistant from './components/AIAssistant';
 
 function App() {
   const starField = Array.from({ length: 220 }, (_, index) => ({
@@ -104,6 +105,7 @@ function App() {
         <Contact/>
       </main>
 
+      <AIAssistant/>
       <Footer/>
     </div>
   );
