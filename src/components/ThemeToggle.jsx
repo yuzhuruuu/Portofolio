@@ -1,28 +1,11 @@
-// 1. WAJIB IMPORT INI! Kalau tidak, useState & useEffect tidak terbaca
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Sun, Moon } from 'lucide-react';
 
-export default function ThemeToggle() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
+export default function ThemeToggle({ theme, onToggle }) {
   return (
     <button
-      onClick={toggleTheme}
-      // Posisinya top-24 (di bawah navbar) dan right-6 (pojok kanan)
+      type="button"
+      onClick={onToggle}
       className={`
         fixed top-24 right-6 z-[200] 
         w-12 h-12 md:w-14 md:h-14 rounded-full
@@ -39,7 +22,6 @@ export default function ThemeToggle() {
         {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
       </div>
 
-      {/* Efek Cahaya/Glow */}
       <div className={`
         absolute inset-0 rounded-full blur-xl z-[-1] opacity-40
         ${theme === 'dark' ? 'bg-yellow-400/30' : 'bg-purple-600/30'}

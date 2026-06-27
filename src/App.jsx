@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ThemeToggle from './components/ThemeToggle';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -13,6 +13,15 @@ import Footer from './components/Footer';
 import AIAssistant from './components/AIAssistant';
 
 function App() {
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === 'undefined') return 'dark';
+    return window.localStorage.getItem('theme') || 'dark';
+  });
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   const starField = Array.from({ length: 220 }, (_, index) => ({
     id: index,
     left: `${Math.random() * 100}%`,
@@ -45,11 +54,26 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const root = window.document.documentElement;
+    const body = window.document.body;
+
+    root.classList.toggle('dark', theme === 'dark');
+    root.setAttribute('data-theme', theme);
+    body.classList.toggle('bg-slate-50', theme !== 'dark');
+    body.classList.toggle('bg-[#02020b]', theme === 'dark');
+    body.classList.toggle('text-slate-900', theme !== 'dark');
+    body.classList.toggle('text-white', theme === 'dark');
+    window.localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
     <div
-      className="min-h-screen relative overflow-hidden transition-colors duration-700 font-sans bg-[#02020b] text-white"
+      className={`min-h-screen relative overflow-hidden transition-colors duration-700 font-sans ${theme === 'dark' ? 'bg-[#02020b] text-white' : 'bg-slate-50 text-slate-900'}`}
       style={{
-        background: 'radial-gradient(circle at 18% 12%, rgba(168,85,247,0.14), transparent 18%), radial-gradient(circle at 80% 10%, rgba(59,130,246,0.12), transparent 12%), #02020b',
+        background: theme === 'dark'
+          ? 'radial-gradient(circle at 18% 12%, rgba(168,85,247,0.14), transparent 18%), radial-gradient(circle at 80% 10%, rgba(59,130,246,0.12), transparent 12%), #02020b'
+          : 'radial-gradient(circle at 18% 12%, rgba(168,85,247,0.16), transparent 18%), radial-gradient(circle at 80% 10%, rgba(59,130,246,0.12), transparent 12%), #f8fafc',
       }}
     >
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -94,7 +118,7 @@ function App() {
 
       {/* RENDER COMPONENTS */}
       <Navbar />
-      <ThemeToggle />
+      <ThemeToggle theme={theme} onToggle={toggleTheme} />
       
       <main className="relative z-10"> {/* Tambahkan relative z-10 biar teks nggak ketutup background */}
         <Hero/>
