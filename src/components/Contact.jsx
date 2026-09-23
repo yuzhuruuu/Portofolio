@@ -167,21 +167,21 @@ export default function Contact() {
                 name="from_name"
                 placeholder="What's your name?"
                 required
-                className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-(--color-neon-purple) dark:border-white/10 dark:bg-[#111827] dark:text-slate-100 dark:placeholder:text-slate-400"
+                className="contact-form-field w-full rounded-2xl px-6 py-4 outline-none transition-all focus:border-(--color-neon-purple)"
               />
               <input
                 type="email"
                 name="reply_to"
                 placeholder="Write your E-mail here..."
                 required
-                className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-(--color-neon-blue) dark:border-white/10 dark:bg-[#111827] dark:text-slate-100 dark:placeholder:text-slate-400"
+                className="contact-form-field w-full rounded-2xl px-6 py-4 outline-none transition-all focus:border-(--color-neon-blue)"
               />
               <textarea
                 name="message"
                 rows="4"
                 placeholder="Tell me about your idea!"
                 required
-                className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 text-slate-900 outline-none transition-all resize-none placeholder:text-slate-400 focus:border-(--color-neon-purple) dark:border-white/10 dark:bg-[#111827] dark:text-slate-100 dark:placeholder:text-slate-400"
+                className="contact-form-field w-full rounded-2xl px-6 py-4 outline-none transition-all resize-none focus:border-(--color-neon-purple)"
               ></textarea>
               <button 
                 type="submit" 

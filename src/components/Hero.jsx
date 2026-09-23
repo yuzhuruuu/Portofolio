@@ -48,7 +48,7 @@ export default function Hero() {
           </a>
           <a 
             href="#contact" 
-            className="px-8 py-3.5 bg-transparent text-gray-700 dark:text-gray-300 text-lg rounded-2xl font-bold border border-gray-700/20 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all text-center"
+            className="px-8 py-3.5 bg-white/95 text-[#111827] dark:bg-transparent dark:text-gray-300 text-lg rounded-2xl font-bold border border-slate-900/70 dark:border-gray-700/20 hover:border-slate-900 dark:hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all text-center"
           >
             Let's Talk
           </a>
