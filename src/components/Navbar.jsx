@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'; // Tambahkan useEffect
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false); // State untuk deteksi scroll
-  const navLinks = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
+  const navLinks = ['Home', 'About', 'Experience', 'Projects', 'Skills', 'Contact'];
 
   // Fungsi untuk mendeteksi scroll
   useEffect(() => {
