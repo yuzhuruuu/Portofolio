@@ -150,6 +150,10 @@ body {
   animation: drift 140s linear infinite reverse;
 }
 
+/* Social brand icons: request dark SVG and invert in dark mode for good contrast */
+.brand-icon { filter: none; }
+.dark .brand-icon { filter: invert(1) !important; }
+
 @keyframes drift {
   0% { transform: translate3d(0, 0, 0); }
   100% { transform: translate3d(-22%, 22%, 0); }

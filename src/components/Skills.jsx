@@ -40,8 +40,8 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-20" data-aos="fade-up">
-          <h3 className="text-5xl font-black tracking-tight">
-            Technical <span className="text-(--color-neon-blue)">Skills</span>
+          <h3 className="text-5xl font-black tracking-tight" style={{ color: 'var(--text-main)' }}>
+            Technical <span style={{ color: 'var(--color-neon-blue)' }}>Skills</span>
           </h3>
           <div className="w-24 h-2 bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) mx-auto mt-4 rounded-full"></div>
         </div>
@@ -53,11 +53,11 @@ export default function Skills() {
               data-aos="fade-up" 
               data-aos-delay="100"
               data-aos-duration="600"
-              className="p-8 rounded-[32px] bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-500 group flex flex-col items-center text-center hover:bg-white/[0.04]"
+              className="p-8 rounded-[32px] bg-slate-50/60 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-all duration-500 group flex flex-col items-center text-center dark:backdrop-blur-sm"
             >
               {/* Icon Container: Awalnya abu-abu, hover jadi warna neon */}
               <div 
-                className="mb-6 p-5 bg-white/5 rounded-2xl transition-all duration-500 group-hover:scale-110 text-gray-500"
+                className="mb-6 p-5 bg-slate-100 dark:bg-white/5 rounded-2xl transition-all duration-500 group-hover:scale-110 text-slate-800 dark:text-gray-400 opacity-100"
                 style={{ '--hover-color': cat.color }}
               >
                 <div className="group-hover:text-[var(--hover-color)] group-hover:drop-shadow-[0_0_10px_var(--hover-color)]">
@@ -66,7 +66,7 @@ export default function Skills() {
               </div>
               
               {/* Judul: Default putih, hover nyala */}
-              <h4 className="text-xl font-bold mb-6 text-white tracking-tight group-hover:text-[var(--hover-color)] transition-colors duration-500" style={{ '--hover-color': cat.color }}>
+              <h4 className="text-xl font-bold mb-6 tracking-tight group-hover:text-[var(--hover-color)] transition-colors duration-500 opacity-100" style={{ '--hover-color': cat.color, color: 'var(--text-main)' }}>
                 {cat.category}
               </h4>
 
@@ -74,7 +74,7 @@ export default function Skills() {
                 {cat.skills.map((skill, j) => (
                   <span 
                     key={j} 
-                    className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-gray-200 group-hover:border-white/20 transition-all duration-500"
+                    className="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded-xl text-[10px] font-bold text-slate-700 uppercase tracking-widest group-hover:text-slate-900 group-hover:border-slate-300 transition-all duration-500 dark:bg-white/5 dark:border-white/10 dark:text-gray-500 dark:group-hover:text-gray-200 dark:group-hover:border-white/20 opacity-100"
                   >
                     {skill}
                   </span>
