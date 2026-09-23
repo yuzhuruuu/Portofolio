@@ -4,8 +4,8 @@ import { ArrowUpRight, BriefcaseBusiness } from 'lucide-react';
 const experiences = [
   {
     period: '2026 — Present',
-    company: 'AWS AI Academy by Dicoding',
-    role: 'AI Academy Cohort 2026',
+    company: 'Dicoding Academy',
+    role: 'AWS AI Academy Cohort 2026',
     type: 'AI • Machine Learning • Learning journey',
     summary:
       'Joined AWS AI Academy by Dicoding to strengthen my AI and machine learning foundations through structured technical learning, hands-on exploration, and practical understanding of modern AI workflows.',
