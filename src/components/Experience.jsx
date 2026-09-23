@@ -49,7 +49,7 @@ const experiences = [
   },
   {
     period: '2025',
-    company: 'HIMA ILKOM UNNES',
+    company: 'I-SECRET ILKOM UNNES',
     role: 'Secretary & Website Enhancement Coordinator',
     type: 'Documentation • Coordination • UI/UX',
     summary:
