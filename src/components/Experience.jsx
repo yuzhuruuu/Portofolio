@@ -136,10 +136,7 @@ export default function Experience() {
                       ))}
                     </div>
 
-                    <div className="experience-link">
-                      <span>Selected scope</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </div>
+                    
                   </div>
 
                   <div className="experience-visual">
@@ -232,10 +229,7 @@ export default function Experience() {
                       ))}
                     </div>
 
-                    <div className="experience-link">
-                      <span>Selected scope</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </div>
+                   
                   </article>
                 ))}
               </div>
