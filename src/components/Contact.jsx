@@ -7,32 +7,32 @@ export default function Contact() {
   const [status, setStatus] = useState('');
 
   const renderBrandIcon = (brandName, color = "currentColor") => {
-    if (brandName === 'linkedin') {
-      return (
-        <svg
-          viewBox="0 0 24 24"
-          className="block w-7 h-7"
-          aria-label="LinkedIn icon"
-          role="img"
-          fill="currentColor"
-          style={{ color: 'var(--text-main)', display: 'block' }}
-        >
-          <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.4a1.56 1.56 0 0 1 0 3.1ZM5.5 9.74h2.88v8.76H5.5V9.74Zm4.53 0h2.76v1.2h.04c.38-.73 1.32-1.5 2.72-1.5 2.91 0 3.45 1.92 3.45 4.4v6.66h-2.88v-6.23c0-1.49-.03-3.41-2.08-3.41-2.08 0-2.4 1.63-2.4 3.3v6.34H10.03V9.74Z" />
-        </svg>
-      );
-    }
+      if (brandName === 'linkedin') {
+        return (
+          <svg
+            viewBox="0 0 16 16"
+            className="block w-7 h-7"
+            aria-label="LinkedIn icon"
+            role="img"
+            fill={color}
+            style={{ display: 'block' }}
+          >
+            <path fillRule="evenodd" clipRule="evenodd" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+          </svg>
+        );
+      }
 
-    const hex = '1e293b';
-    const cdnUrl = `https://cdn.simpleicons.org/${brandName}/${hex}`;
-    return (
-      <img
-        src={cdnUrl}
-        alt={`${brandName} icon`}
-        className="w-full h-full opacity-100 group-hover:opacity-100 transition-opacity brand-icon"
-        style={{ display: 'block' }}
-      />
-    );
-  }; 
+      const hex = '1e293b';
+      const cdnUrl = `https://cdn.simpleicons.org/${brandName}/${hex}`;
+      return (
+        <img
+          src={cdnUrl}
+          alt={`${brandName} icon`}
+          className="w-full h-full opacity-100 group-hover:opacity-100 transition-opacity brand-icon"
+          style={{ display: 'block' }}
+        />
+      );
+    };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -125,7 +125,7 @@ export default function Contact() {
                 {/* LinkedIn */}
                 <a href="https://linkedin.com/in/annisayusri-nurrochmah" target="_blank" rel="noreferrer" 
                   className="w-16 h-16 p-4.5 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-                  <span className="inline-flex items-center justify-center w-7 h-7 text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors" style={{ color: 'var(--text-main)' }}>
+                  <span className="inline-flex items-center justify-center w-7 h-7 text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors duration-300">
                     {renderBrandIcon('linkedin', 'currentColor')}
                   </span>
                 </a>
@@ -133,7 +133,7 @@ export default function Contact() {
                 {/* Instagram */}
                 <a href="https://instagram.com/ysr.rchmh" target="_blank" rel="noreferrer" 
                   className="w-16 h-16 p-4.5 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-                  <span className="text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors">
+                  <span className="inline-flex items-center justify-center w-7 h-7 text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors duration-300">
                     {renderBrandIcon('instagram', 'currentColor')}
                   </span>
                 </a>
@@ -141,7 +141,7 @@ export default function Contact() {
                 {/* GitHub */}
                 <a href="https://github.com/yuzhuruuu" target="_blank" rel="noreferrer" 
                   className="w-16 h-16 p-4.5 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-                  <span className="text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors">
+                  <span className="inline-flex items-center justify-center w-7 h-7 text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors duration-300">
                     {renderBrandIcon('github', 'currentColor')}
                   </span>
                 </a>
@@ -149,7 +149,7 @@ export default function Contact() {
                 {/* TikTok */}
                 <a href="https://tiktok.com/@https.bewhysr" target="_blank" rel="noreferrer" 
                   className="w-16 h-16 p-4.5 bg-slate-100 dark:bg-white/3 border border-black/5 dark:border-white/5 rounded-2xl flex items-center justify-center group hover:border-sky-400/50 hover:bg-sky-400/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-                  <span className="text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors">
+                  <span className="inline-flex items-center justify-center w-7 h-7 text-slate-700 dark:text-white group-hover:text-sky-500 transition-colors duration-300">
                     {renderBrandIcon('tiktok', 'currentColor')}
                   </span>
                 </a>

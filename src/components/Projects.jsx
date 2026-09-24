@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   GraduationCap, 
   Smartphone, 
@@ -7,7 +7,9 @@ import {
   Layout, 
   UserPlus, 
   Shirt,
-  DatabaseZap
+  DatabaseZap,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 const projectsData = [
@@ -86,10 +88,19 @@ const projectsData = [
 ];
 
 export default function Projects() {
+  const [mobileIndex, setMobileIndex] = useState(0);
+
+  const prevProject = () => {
+    setMobileIndex((prev) => (prev === 0 ? projectsData.length - 1 : prev - 1));
+  };
+
+  const nextProject = () => {
+    setMobileIndex((prev) => (prev === projectsData.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section id="projects" className="py-32 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        
         <div className="text-center mb-20" data-aos="fade-up">
           <h3 className="text-6xl font-black tracking-tight mb-6">
             Featured <span className="text-(--color-neon-blue)">Works</span>
@@ -97,68 +108,155 @@ export default function Projects() {
           <div className="w-24 h-2 bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((proj, i) => {
-            // Element kontainer gambar asli tanpa perubahan styling
-            const ImageElement = (
-              <div className="relative h-52 overflow-hidden border-b border-white/5">
-                <img 
-                  src={proj.image} 
-                  alt={proj.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80"></div>
-              </div>
-            );
+        <div className="hidden md:block">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projectsData.map((proj, i) => {
+              const ImageElement = (
+                <div className="relative h-52 overflow-hidden border-b border-white/5">
+                  <img 
+                    src={proj.image} 
+                    alt={proj.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80"></div>
+                </div>
+              );
 
-            return (
-              <div 
-                key={i} 
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                className="bg-white/[0.03] backdrop-blur-md rounded-[32px] border border-white/5 hover:border-(--color-neon-purple)/50 transition-all group overflow-hidden flex flex-col h-full"
-              >
-                {/* Gambar jadi link jika punya URL demo */}
-                {proj.link ? (
-                  <a href={proj.link} target="_blank" rel="noreferrer" className="block cursor-pointer">
-                    {ImageElement}
-                  </a>
-                ) : (
-                  ImageElement
-                )}
+              return (
+                <div 
+                  key={i} 
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  className="bg-white/[0.03] backdrop-blur-md rounded-[32px] border border-white/5 hover:border-(--color-neon-purple)/50 transition-all group overflow-hidden flex flex-col h-full"
+                >
+                  {proj.link ? (
+                    <a href={proj.link} target="_blank" rel="noreferrer" className="block cursor-pointer">
+                      {ImageElement}
+                    </a>
+                  ) : (
+                    ImageElement
+                  )}
 
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex justify-between items-center mb-5">
-                    <h4 className="text-2xl font-bold group-hover:text-(--color-neon-purple) transition-colors font-mono tracking-tight">
-                      {/* Judul jadi link jika punya URL demo */}
-                      {proj.link ? (
-                        <a href={proj.link} target="_blank" rel="noreferrer" className="hover:underline cursor-pointer">
-                          {proj.title}
-                        </a>
-                      ) : (
-                        proj.title
-                      )}
-                    </h4> 
-                    <div className="p-2.5 bg-white/5 rounded-xl text-(--color-neon-blue) group-hover:text-(--color-neon-purple) transition-colors border border-white/10">
-                      {proj.icon}
+                  <div className="p-8 flex flex-col flex-grow">
+                    <div className="flex justify-between items-center mb-5">
+                      <h4 className="text-2xl font-bold group-hover:text-(--color-neon-purple) transition-colors font-mono tracking-tight">
+                        {proj.link ? (
+                          <a href={proj.link} target="_blank" rel="noreferrer" className="hover:underline cursor-pointer">
+                            {proj.title}
+                          </a>
+                        ) : (
+                          proj.title
+                        )}
+                      </h4> 
+                      <div className="p-2.5 bg-white/5 rounded-xl text-(--color-neon-blue) group-hover:text-(--color-neon-purple) transition-colors border border-white/10">
+                        {proj.icon}
+                      </div>
+                    </div>
+
+                    <p className="text-gray-400 mb-6 line-clamp-3 text-sm leading-relaxed flex-grow">
+                      {proj.desc}
+                    </p>
+                    
+                    <div className="flex gap-2 flex-wrap mt-auto pt-4 border-t border-white/5">
+                      {proj.tech.map(t => (
+                        <span key={t} className="px-3 py-1.5 text-[10px] bg-white/5 border border-white/10 text-gray-400 rounded-lg font-extrabold uppercase tracking-widest">
+                          {t}
+                        </span>
+                      ))}
                     </div>
                   </div>
-
-                  <p className="text-gray-400 mb-6 line-clamp-3 text-sm leading-relaxed flex-grow">
-                    {proj.desc}
-                  </p>
-                  
-                  <div className="flex gap-2 flex-wrap mt-auto pt-4 border-t border-white/5">
-                    {proj.tech.map(t => (
-                      <span key={t} className="px-3 py-1.5 text-[10px] bg-white/5 border border-white/10 text-gray-400 rounded-lg font-extrabold uppercase tracking-widest">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="block md:hidden">
+          <div className="projects-mobile-shell">
+            <button
+              type="button"
+              aria-label="Previous project"
+              onClick={prevProject}
+              className="projects-mobile-nav projects-mobile-nav-left"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            <div className="projects-mobile-viewport">
+              <div
+                className="projects-mobile-track"
+                style={{ transform: `translateX(-${mobileIndex * 100}%)` }}
+              >
+                {projectsData.map((proj, i) => {
+                  const ImageElement = (
+                    <div className="relative h-52 overflow-hidden border-b border-white/5">
+                      <img 
+                        src={proj.image} 
+                        alt={proj.title} 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80"></div>
+                    </div>
+                  );
+
+                  return (
+                    <article key={i} className="projects-mobile-card">
+                      <div className="bg-white/[0.03] backdrop-blur-md rounded-[28px] border border-white/5 overflow-hidden flex flex-col h-full">
+                        {proj.link ? (
+                          <a href={proj.link} target="_blank" rel="noreferrer" className="block cursor-pointer">
+                            {ImageElement}
+                          </a>
+                        ) : (
+                          ImageElement
+                        )}
+
+                        <div className="p-6 flex flex-col flex-grow">
+                          <div className="flex justify-between items-center mb-4">
+                            <h4 className="text-xl font-bold font-mono tracking-tight text-white">
+                              {proj.link ? (
+                                <a href={proj.link} target="_blank" rel="noreferrer" className="hover:underline cursor-pointer">
+                                  {proj.title}
+                                </a>
+                              ) : (
+                                proj.title
+                              )}
+                            </h4>
+                            <div className="p-2.5 bg-white/5 rounded-xl text-(--color-neon-blue) border border-white/10">
+                              {proj.icon}
+                            </div>
+                          </div>
+
+                          <p className="text-gray-400 mb-5 line-clamp-4 text-sm leading-relaxed flex-grow">
+                            {proj.desc}
+                          </p>
+
+                          <div className="flex gap-2 flex-wrap mt-auto pt-4 border-t border-white/5">
+                            {proj.tech.map((t) => (
+                              <span
+                                key={t}
+                                className="px-2.5 py-1.5 text-[9px] bg-white/5 border border-white/10 text-gray-400 rounded-lg font-extrabold uppercase tracking-widest"
+                              >
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
-            );
-          })}
+            </div>
+
+            <button
+              type="button"
+              aria-label="Next project"
+              onClick={nextProject}
+              className="projects-mobile-nav projects-mobile-nav-right"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

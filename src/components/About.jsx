@@ -46,11 +46,14 @@ export default function About() {
             
             <div className="space-y-4 text-slate-600 dark:text-gray-400">
               <p className="leading-relaxed">
-                As an Information Systems student at{" "}
+                <span style={{ color: '#00f2fe' }} className="font-bold">
+                  Annisa Yusri Nur Rochmah
+                </span>{" "}
+                an Information Systems student at{" "}
                 <span className="font-bold text-blue-700 dark:text-neon-blue">
                   Universitas Negeri Semarang
                 </span>
-                , I’m passionate about turning ideas into meaningful digital solutions. I
+                , passionate about turning ideas into meaningful digital solutions. I
                 enjoy working at the intersection of data, technology, and design.
               </p>
               <p className="leading-relaxed">

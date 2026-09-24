@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowUpRight, BriefcaseBusiness } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowUpRight, BriefcaseBusiness, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const experiences = [
   {
@@ -35,7 +35,7 @@ const experiences = [
   {
     period: '2026 — Present',
     company: 'Generation.girl + GDG Semarang',
-    role: 'Community Member',
+    role: 'TECH Community',
     type: 'STEM • Tech • Community growth',
     summary:
       'Actively involved in STEM and tech communities to keep learning, building networks, and expanding my exposure to innovation, collaboration, and real-world technology culture.',
@@ -55,7 +55,7 @@ const experiences = [
     summary:
       'Handled organizational documentation and supported website enhancement initiatives with a focus on improving the user experience and maintaining a more polished digital presence.',
     highlights: ['Administration', 'Documentation', 'Website enhancement', 'UI/UX coordination'],
-    badge: 'HIMA',
+    badge: 'I-SECRET',
     images: [
       '/experience/isecret-1.jpg',
       '/experience/isecret-2.jpg',
@@ -80,6 +80,16 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const [mobileIndex, setMobileIndex] = useState(0);
+
+  const prevExperience = () => {
+    setMobileIndex((prev) => (prev === 0 ? experiences.length - 1 : prev - 1));
+  };
+
+  const nextExperience = () => {
+    setMobileIndex((prev) => (prev === experiences.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section id="experience" className="experience-section py-32 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -91,69 +101,155 @@ export default function Experience() {
           <div className="w-20 h-1.5 bg-gradient-to-r from-(--color-neon-purple) to-(--color-neon-blue) mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <div className="experience-list">
-          {experiences.map((experience, index) => {
-            const reversed = index % 2 === 1;
+        <div className="hidden md:block">
+          <div className="experience-list">
+            {experiences.map((experience, index) => {
+              const reversed = index % 2 === 1;
 
-            return (
-              <article
-                key={experience.role}
-                className={`experience-card ${reversed ? 'reversed' : ''}`}
-                data-aos="fade-up"
-                data-aos-delay={index * 80}
+              return (
+                <article
+                  key={experience.role}
+                  className={`experience-card ${reversed ? 'reversed' : ''}`}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 80}
+                >
+                  <div className="experience-copy">
+                    <div className="experience-meta">
+                      <span className="experience-pill">{experience.period}</span>
+                      <span className="experience-divider" />
+                      <span>{experience.company}</span>
+                    </div>
+
+                    <div className="experience-heading">
+                      <span className="experience-icon">
+                        <BriefcaseBusiness className="w-5 h-5" />
+                      </span>
+                      <h4>{experience.role}</h4>
+                    </div>
+
+                    <p className="experience-type">{experience.type}</p>
+                    <p className="experience-summary">{experience.summary}</p>
+
+                    <div className="experience-highlights">
+                      {experience.highlights.map((item) => (
+                        <span key={item}>{item}</span>
+                      ))}
+                    </div>
+
+                    <div className="experience-link">
+                      <span>Selected scope</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </div>
+                  </div>
+
+                  <div className="experience-visual">
+                    <div className="photo-collage">
+                      <img
+                        src={experience.images[0]}
+                        alt={experience.role}
+                        className="photo-card photo-main"
+                      />
+                      <img
+                        src={experience.images[1]}
+                        alt={`${experience.role} detail`}
+                        className="photo-card photo-side photo-side-one"
+                      />
+                      <img
+                        src={experience.images[2]}
+                        alt={`${experience.role} detail 2`}
+                        className="photo-card photo-side photo-side-two"
+                      />
+                      <div className="photo-badge">{experience.badge}</div>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="block md:hidden">
+          <div className="experience-mobile-shell">
+            <button
+              type="button"
+              aria-label="Previous experience"
+              onClick={prevExperience}
+              className="experience-mobile-nav experience-mobile-nav-left"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            <div className="experience-mobile-viewport">
+              <div
+                className="experience-mobile-track"
+                style={{ transform: `translateX(-${mobileIndex * 100}%)` }}
               >
-                <div className="experience-copy">
-                  <div className="experience-meta">
-                    <span className="experience-pill">{experience.period}</span>
-                    <span className="experience-divider" />
-                    <span>{experience.company}</span>
-                  </div>
+                {experiences.map((experience) => (
+                  <article key={experience.role} className="experience-mobile-card">
+                    <div className="experience-mobile-header">
+                      <span className="experience-pill">{experience.period}</span>
+                      <span className="experience-mobile-company">{experience.company}</span>
+                    </div>
 
-                  <div className="experience-heading">
-                    <span className="experience-icon">
-                      <BriefcaseBusiness className="w-5 h-5" />
-                    </span>
-                    <h4>{experience.role}</h4>
-                  </div>
+                    <div className="experience-heading">
+                      <span className="experience-icon">
+                        <BriefcaseBusiness className="w-5 h-5" />
+                      </span>
+                      <h4>{experience.role}</h4>
+                    </div>
 
-                  <p className="experience-type">{experience.type}</p>
-                  <p className="experience-summary">{experience.summary}</p>
+                    <p className="experience-type">{experience.type}</p>
 
-                  <div className="experience-highlights">
-                    {experience.highlights.map((item) => (
-                      <span key={item}>{item}</span>
-                    ))}
-                  </div>
+                    <div className="experience-mobile-badge-wrap">
+                      <span className="photo-badge experience-mobile-badge">{experience.badge}</span>
+                    </div>
 
-                  <div className="experience-link">
-                    <span>Selected scope</span>
-                    <ArrowUpRight className="w-4 h-4" />
-                  </div>
-                </div>
+                    <div className="experience-visual experience-mobile-visual">
+                      <div className="photo-collage experience-mobile-collage">
+                        <img
+                          src={experience.images[0]}
+                          alt={experience.role}
+                          className="photo-card photo-main"
+                        />
+                        <img
+                          src={experience.images[1]}
+                          alt={`${experience.role} detail`}
+                          className="photo-card photo-side photo-side-one"
+                        />
+                        <img
+                          src={experience.images[2]}
+                          alt={`${experience.role} detail 2`}
+                          className="photo-card photo-side photo-side-two"
+                        />
+                      </div>
+                    </div>
 
-                <div className="experience-visual">
-                  <div className="photo-collage">
-                    <img
-                      src={experience.images[0]}
-                      alt={experience.role}
-                      className="photo-card photo-main"
-                    />
-                    <img
-                      src={experience.images[1]}
-                      alt={`${experience.role} detail`}
-                      className="photo-card photo-side photo-side-one"
-                    />
-                    <img
-                      src={experience.images[2]}
-                      alt={`${experience.role} detail 2`}
-                      className="photo-card photo-side photo-side-two"
-                    />
-                    <div className="photo-badge">{experience.badge}</div>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+                    <p className="experience-summary">{experience.summary}</p>
+
+                    <div className="experience-highlights">
+                      {experience.highlights.map((item) => (
+                        <span key={item}>{item}</span>
+                      ))}
+                    </div>
+
+                    <div className="experience-link">
+                      <span>Selected scope</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              aria-label="Next experience"
+              onClick={nextExperience}
+              className="experience-mobile-nav experience-mobile-nav-right"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

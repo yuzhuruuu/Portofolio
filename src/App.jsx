@@ -233,11 +233,11 @@ function App() {
       
       <main className="relative z-10"> {/* Tambahkan relative z-10 biar teks nggak ketutup background */}
         <Hero/>
-        <Statistics/>
         <About/>
         <Experience/>
         <Projects/>
         <Skills/>
+        <Statistics/>
         <Contact/>
       </main>
 
